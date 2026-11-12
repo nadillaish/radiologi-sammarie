@@ -81,6 +81,7 @@
                             <th>Pasien</th>
                             <th>Jenis Pemeriksaan</th>
                             <th>Dokter Pengirim</th>
+                            <th>Dokter Radiologi</th>
                             <th>Tanggal/Jam</th>
                             <th>Status</th>
                             <th class="text-center">Aksi</th>
@@ -100,6 +101,9 @@
                                 <td class="text-gray-700">{{ $exam->examination_type }}</td>
                                 <td>
                                     <div class="text-gray-700">{{ $exam->referringDoctor->name }}</div>
+                                </td>
+                                <td>
+                                    <div class="text-gray-700 font-medium">{{ $exam->radiologist?->name ?? '-' }}</div>
                                 </td>
                                 <td>
                                     <div class="text-gray-700">{{ $exam->examination_date->format('d/m/Y') }}</div>

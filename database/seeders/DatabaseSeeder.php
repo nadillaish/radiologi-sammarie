@@ -15,31 +15,34 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(DokterRadiologiSeeder::class);
+        $this->call(RadiologyServiceCategorySeeder::class);
+
         // ─── Users ────────────────────────────────────────────────────────────
         $radiografer = User::create([
             'name'     => 'Budi Santoso',
-            'email'    => 'radiografer@example.com',
+            'email'    => 'budi.santoso@sammarie.test',
             'password' => Hash::make('password123'),
             'role'     => 'radiografer',
         ]);
 
         $dokterRadiologi = User::create([
             'name'     => 'dr. Andi Wijaya, Sp.Rad',
-            'email'    => 'radiolog@example.com',
+            'email'    => 'andi.wijaya@sammarie.test',
             'password' => Hash::make('password123'),
             'role'     => 'dokter_radiologi',
         ]);
 
         $dokterPengirim1 = User::create([
             'name'     => 'dr. Siti Rahayu, Sp.OG',
-            'email'    => 'dokter@example.com',
+            'email'    => 'siti.rahayu@sammarie.test',
             'password' => Hash::make('password123'),
             'role'     => 'dokter_pengirim',
         ]);
 
         $dokterPengirim2 = User::create([
             'name'     => 'dr. Hendra Kusuma, Sp.A',
-            'email'    => 'dokter2@example.com',
+            'email'    => 'hendra.kusuma@sammarie.test',
             'password' => Hash::make('password123'),
             'role'     => 'dokter_pengirim',
         ]);

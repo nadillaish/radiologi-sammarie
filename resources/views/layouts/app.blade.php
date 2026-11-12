@@ -7,6 +7,7 @@
     <title>@yield('title', 'Radiologi RSIA SamMarie') — RSIA SamMarie Basra</title>
     <meta name="description" content="Sistem Informasi Workflow Pelaporan Hasil Pemeriksaan Radiologi RSIA SamMarie Basra">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('styles')
 </head>
 <body class="bg-slate-50 min-h-screen font-sans">
 
